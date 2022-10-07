@@ -7,7 +7,7 @@ import (
 
 func main(){
 	var wg sync.WaitGroup
-	wg.Add(3)
+	wg.Add(3) // if we dont have add -> main does not wait until other tasks to be done!
 
 	go func ()  {
 		defer wg.Done()
